@@ -11,11 +11,18 @@ def display_banner():
     stars = '*' * len(msg)
     print('\n', stars, '\n', msg, '\n',  stars, '\n')
 
+def instructions():
+    message = 'Enter a sentence to convert to camelcase'
+    dollars = '$' * len(message)
+    print('\n', dollars, '\n', message, '\n', dollars, '\n')
+
+
+
 
 
 def main():
     display_banner()
-
+    instructions()
     sentence = input('Enter your sentence:  ')
     words = sentence.split(' ')                               # Break by spaces
     camelcased_words = [ camelcase(word) for word in words ]  # camelCase everything
